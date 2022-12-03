@@ -1,5 +1,5 @@
 import streamlit 
-import request
+import requests
 streamlit.title("My parents new healthy diner")
 
 streamlit.header('Breakfast Menu')
@@ -15,5 +15,5 @@ streamlit.dataframe(my_fruit_list)
 #streamlit.dataframe(fruits_to_show)  
 
 
-fruityvice_response = request.get("https://fruityvice.com/api/fruit/watermelon")
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
 streamlit.text(fruityvice_response)
