@@ -41,7 +41,7 @@ def get_fruityvice_data(this_fruit_choice):
   
   # new section to display
   
-  streamlit.header('Fruityvice fruit advice')
+  streamlit.header("Fruityvice fruit advice")
   try :
     fruit_choice = streamlit.text_input('What fruit would you like information about?')
     if not fruit_choice:
