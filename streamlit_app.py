@@ -73,8 +73,8 @@ try :
 #streamlit.dataframe(fruityvice_normalized)
 
 #streamlit.stop()
-import snowflake.connector
-my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
+#import snowflake.connector
+ my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
 my_cur.execute("SELECT * FROM pc_rivery_db.public.fruit_load_list")
 my_data_rows = my_cur.fetchall()
