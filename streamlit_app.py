@@ -1,6 +1,9 @@
 import streamlit 
 import requests
 import pandas 
+import snowflake.connector
+from urllib.error import URLError
+
 #import snowflake.connector
 streamlit.title("My parents new healthy diner")
 
@@ -9,7 +12,7 @@ streamlit.text('Omega 3 & Blueberry Oatmeal')
 streamlit.text('Kale, Spinach & Rocket Smoothie')
 streamlit.text('Hard-Boiled Free-Range Egg')
 
-import pandas as pd
+#import pandas as pd
 my_fruit_list = pd.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
 streamlit.dataframe(my_fruit_list)  
 #fruits_selected = streamlit.multiselect("pick me some fruits :",list(my_fruit_list.index),['Avocado','Strawberries'])
@@ -37,7 +40,7 @@ streamlit.dataframe(fruityvice_normalized)
 #streamlit.dataframe(fruityvice_normalized)
 
 streamlit.stop()
-import snowflake.connector
+#import snowflake.connector
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
 my_cur.execute("SELECT * FROM pc_rivery_db.public.fruit_load_list")
