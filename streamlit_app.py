@@ -20,7 +20,7 @@ def get_fruityvice_data(this_fruit_choice):
    fruityvice_normalized = pd.json_normalize(fruityvice_response.json())
    return(fruityvice_normalized)
   
-  # new section to display  
+   ## new section to display  
 streamlit.header("Fruityvice fruit advice")
 
 try :
